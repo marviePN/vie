@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MOWS</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <header id="top">
+    <div id="header">
+        <div class="img-wrap">
+          <img src="my profile.png" alt="Profile Picture" >
+        </div>
+      <div id="name">
+          <p><b>Marvie D. Cauyan</b></p>
+    </div>
+      <div id="topnav">
+        <nav>
+          <h1>
+            <a id="topnav-active" href="index.html">MQTT</a>
+            
+          </h1>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div 
+      <fieldset>
+        <legend>
+          <label for="publish">Publish</label>
+        </legend>
+          <form>
+              <label for = "topic"> Topic </label>
+              <input type="text" name="pubtopic" placeholder="Cloud" id="topics"><br>
+              <label for = "payload"> Payload </label>
+              <input type="text" name="pubpayload" placeholder="Mows" id="payload" required><br>
+          </form>  
+      </fieldset>
+      <br>
+      <center>
+        <button id = "btnPublish">Publish</button>  
+      </center>
+
+      <fieldset>
+        <legend>
+          <label for="broker">Broker</label>
+        </legend>
+          <form>
+            <label  for="address">Address</label>
+            <input type="text" id= "broker" value="ws://broker.hivemq.com:8000/mqtt" placeholder=""><br><br>
+            <textarea name = "Status" id="status" rows="4" cols="30" placeholder="What is your status ?" wrap="hard"  required> What is your Status ?  </textarea>
+          </form>
+      </fieldset>
+      
+      <center>
+        <button id = "btnConnect">Connect</button>
+        <button id = "Connect">Disconnect</button> 
+      </center>
+      <br>
+
+
+      <fieldset>
+        <legend>
+          <label for="subscribe">Subscribe</label>
+        </legend>
+          <form>
+            <label for="topic_s">Topic</label>
+            <input type="text" name="subtopic" placeholder="Cloud" id="topic_s">
+          </form>
+      </fieldset>
+      <br>
+      <center>
+        <button id="btnSubscribe">Subscribe</button> 
+      </center>
+      <br><br>
+      
+
+      <div class="container" style="width: 50%">
+        <table class="table table-hover" class="table-bordered">
+          <thead>
+            <tr>
+              <th>Topic</th>
+              <th>Payload</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main> 
+  <br><br><br><br>
+  <footer>
+    <div>
+      <a href ="#top">Back to top</a>
+          <h3>Stay Connected</h3>
+          <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" >
+              <img src="https://www.gft.eng.cam.ac.uk/gft-on-twitter/image">
+          </a>
+          <a href="https://www.facebook.com" >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2000px-Facebook_icon_2013.svg.png">
+          </a>
+          <a href="https://myaccount.google.com/">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKAGP4dUPjVwWXtDIb_R3NcEWAz07BwweeBXa1OU1NL7kLsfgY">
+          </a>
+    </div>
+    <div class="footer-left">
+      <p>About Me </p>
+      <p>Contact Me: 09101167718 or (02) 8821 1189</p>
+        <p>Visit her favorite websites:<br>
+          <a href="https://www.whoneedsmaps.com/about/" class="footer-left">@https://www.whoneedsmaps.com/about/</a><br>
+          <a href="https://aminearlythereyet.com/" class="footer-left">@https://aminearlythereyet.com/</a><br>
+          <a href="https://www.bemytravelmuse.com/ and many more" class="footer-left">@https://www.bemytravelmuse.com/</a><br>
+        </p>
+      <p>MarvieCauyan.copy2019.All Rights Reserved</p>
+    </div>
+  </footer>
+</body>
+<script src="scripts/browserMqtt.js"></script>
+<script src="scripts/controller.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
